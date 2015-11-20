@@ -10,4 +10,12 @@ aws sns -- set topic attributes --topic arn $ARN --attribute name DisplayName --
 
 aws sns subscribe -- topic-arn $ARN --protocol sms --notification-endpoint 
 
+
+aws sns create-topic --name et-mp2
+{
+	"TopicArn": arn:aws:sns:us-east-1:503284711384:et-mp2
+}
+
+aws sns subscribe --topic-arn arn:aws:sns:us-eat-1:503284711384:et-mp2 --notification0-endpoint 
+
 //testing
