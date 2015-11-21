@@ -9,5 +9,5 @@ aws sns -- set topic attributes --topic arn $ARN --attribute name DisplayName --
 aws sns subscribe -- topic-arn $ARN --protocol sms --notification-endpoint $email
 
 
-
+aws sns publish --topic-arn arn:aws:sns:us-east-1:5032847113842:et-mp2 --message "Thank You or subscribing!""
 
