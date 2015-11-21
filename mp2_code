@@ -13,3 +13,7 @@ aws sns publish --topic-arn arn:aws:sns:us-east-1:5032847113842:et-mp2 --message
  
  
 //display image upon successful upload
+
+
+$image=...
+echo '<img src=" '.$img.'">'; 
