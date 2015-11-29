@@ -10,7 +10,7 @@ aws ec2 wait instance-running --instance-ids ${instanceARP[@]}
 echo "${#instance[@]}"
 echo "I'm Ready, instance are running"
 
-aws elb create-load-balancer --load-balancer-name et-litmo-444-lb --listeners Protocl=HTTP.LoadBalancerPort=80, InstanceProtocol=HTTP, InstancePort=80 --security-group-ids $4 --subnet-id $5 --output=text 
+aws elb create-load-balancer --load-balancer-name itmo-444-et-lb --listeners Protocl=HTTP.LoadBalancerPort=80, InstanceProtocol=HTTP, InstancePort=80 --security-group-ids $4 --subnet-id $5 --output=text 
 
 
 
