@@ -21,7 +21,7 @@ echo "\n"
 
 aws elb register-instances-with-load-balancer --load-balancer-name itmo-444-et-lb --instances ${instanceARR[@]}
 
-aws elb configure-health-check --load-balancer-name et-itmo-444-lb --health-check Target=HTTP:80/index.html,Interval=30,UnhealthyThreshold=2,HealthyThreshold=2,Timeout=3
+aws elb configure-health-check --load-balancer-name itmo-444-et-lb --health-check Target=HTTP:80/index.html,Interval=30,UnhealthyThreshold=2,HealthyThreshold=2,Timeout=3
 
 aws autoscaling create-launch-configuration --launch-configuration-name et-itmo-444-launch-config --image-id $1 --key-name $6 --security-groups $4 --instance-type $3 --user-data file://Environment-setup/install-webserver.sh --iam-instance-profile $7
 
